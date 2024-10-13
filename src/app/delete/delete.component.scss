@@ -1,0 +1,45 @@
+.delete-dialog-title {
+  background-color: rgb(236, 169, 169);
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.delete-dialog-content {
+  padding: 20px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.delete-dialog-actions {
+  display: flex;          // Use flexbox for layout
+  justify-content: flex-end; // Align buttons to the left
+  margin: 10px;      // Space above buttons
+}
+
+button.mat-button {
+  float: left;
+}
+.taskbtn {
+  float: inline-end;
+  justify-content: end;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  // border: 1px solid #000;
+}
+.warning{
+  background-color: rgb(245, 210, 145);
+  border-radius: 0%;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
+}
+.taskbtn button {
+  flex: 1;
+  white-space: nowrap;
+}

@@ -1,0 +1,187 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navRight{
+  float: right;
+}
+/* Flex container for toolbar */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Enable wrapping on small screens */
+  padding: 10px;
+}
+
+button {
+  margin-right: 8px;
+}
+
+
+
+
+footer {
+  width: 99%;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+footer .left{
+  width: 35%;
+  float: left;
+  // border: 1px solid #000;
+}
+
+footer .left input{
+  width: 28%;
+  height: 100%;
+  margin-left: 9px;
+}
+footer .right{
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  width: 70%;
+  // border: 1px solid #000;
+}
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.page-item {
+  display: flex;
+}
+
+.page-link {
+  display: block;
+  padding: 10px 15px;
+  margin: 0;
+  color: #010508;
+  text-decoration: none;
+  border-right: 1px solid #ddd;
+}
+
+.page-item:last-child .page-link {
+  border-right: none;
+}
+
+.page-item.active .page-link {
+  background-color: #e9ebec;
+  color: rgb(17, 1, 1);
+}
+
+.page-item.disabled .page-link {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    padding: 8px 12px;
+  }
+}
+
+
+
+
+
+
+/* Spacer for aligning right-side items */
+.example-spacer {
+  flex: 1;
+}
+
+/* Task button section styling */
+.taskbtn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 30%;
+}
+
+.warning {
+  background-color: rgb(245, 210, 145);
+  border-radius: 4px;
+}
+
+.taskbtn button, .taskbtn input {
+  white-space: nowrap;
+}
+
+/* Input field adjustments */
+.taskbtn input {
+  height: 35px;
+  width: 200px;
+  padding-right: 10px;
+  flex-shrink: 0; /* Prevent shrinking on smaller screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Stack task buttons and search input vertically */
+  .taskbtn {
+    flex-direction: column; /* Change direction to column for mobile view */
+    width: 100%; /* Full width on mobile */
+    align-items: center; /* Make buttons take full width */
+    gap: 10px; /* Maintain gap between buttons and input */
+  }
+
+  .taskbtn button, .taskbtn input {
+    width: 100%; /* Full width for buttons and input on mobile */
+  }
+
+  /* Toolbar adjustment */
+  mat-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .example-spacer {
+    display: none; /* Hide the spacer on mobile */
+  }
+}
+
+/* Larger screen (desktop) adjustments */
+@media (min-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .taskbtn {
+    width: 40%; /* Wider task button container on large screens */
+  }
+
+  .taskbtn input {
+    width: 300px; /* Increase input width on large screens */
+  }
+  .table {
+    margin-top: 95px;
+    padding: 0 10px;
+  }
+
+}
+
+.table {
+  margin-top: 8px;
+  padding: 0 10px;
+}

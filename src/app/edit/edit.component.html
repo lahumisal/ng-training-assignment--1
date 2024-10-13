@@ -1,0 +1,50 @@
+<div class="tasks">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"> <!-- Added class for centering -->
+        <h5 class="modal-title">
+          Edit Task
+        </h5> <!-- Add class to center text -->
+        <button type="button" class="close" data-dismiss="modal" (click)="closeModal()" aria-label="Close">
+          <span aria-hidden="">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <mat-form-field appearance="outline">
+          <mat-label>Assigned To</mat-label>
+          <input matInput type="text" required placeholder="User 1" formControlName="assignedTo">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <input matInput type="text" required placeholder="Not Assigned" formControlName="status">
+        </mat-form-field>
+      </div>
+
+      <div class="modal-body">
+        <mat-form-field appearance="outline">
+          <mat-label>Date</mat-label>
+          <input matInput type="date" required placeholder="Select a date" formControlName="Date">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="priority">
+          <mat-label>Priority</mat-label>
+          <mat-select aria-label="Default select example" required formControlName="Priority">
+            <mat-option selected>Priority</mat-option>
+            <mat-option value="1">Low</mat-option>
+            <mat-option value="2">Medium</mat-option>
+            <mat-option value="3">High</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea formControlName="message" matInput required cdkTextareaAutosize #autosize cdkAutosizeMinRows="3" cdkAutosizeMaxRows=""></textarea>
+      </mat-form-field>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" (click)="closeModal()">Cancel</button>
+        <button type="submit" class="btn btn-warning">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
